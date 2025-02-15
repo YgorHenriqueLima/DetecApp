@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #000000;
+}
+
+header {
+    background-color: #354e68;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#logo-detec{
+    text-align: left;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.sidebar {
+    width: 300px;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar .info-aparelho {
+    background: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.sidebar .info-aparelho .smartphone{
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar .info-aparelho .smartphone img{
+    width: 50px;
+}
+.funcionalidades-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+a.botao,button.botao {
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button.botao:hover {
+    background: #0056b3;
+}
+
+.map-container {
+    flex-grow: 1;
+    height: 100%;
+    background-color: #f8f9fa;
+}

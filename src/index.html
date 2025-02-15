@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detec - Rastreamento</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="./styles/estilo-principal.css">
+    <link rel="shortcut icon" href="img/D-dog-icon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div id="logo-detec">
+            <h1><img src="img/D-dog.png" alt="D-dog" width="40">DetecApp</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="sidebar">
+            <div class="info-aparelho">
+                <span class="smartphone">
+                    <img src="img/smartphone-icon.png" alt="smartphone-icon">
+                    <p id="nome-dispositivo">Moto G50</p>
+                </span>
+            </div>
+
+            <div class="funcionalidades-container">
+                <button class="botao" id="Obter_localizacao_computador">Ative a Localização</button>
+
+                <button class="botao">Adicionar Aparelho</button>
+                
+                <button class="botao" id="btn_excluirAparelho">Excluir Aparelho</button>
+                
+                <a class="botao" href="Lista_aparelhos.html">Lista de Aparelhos</a>
+            </div>  
+        </div>
+
+        <div id="map" class="map-container"></div>
+    </main>
+
+    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="funcionalidades.js"></script>
+</body>
+</html>
