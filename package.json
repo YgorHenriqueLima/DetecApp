@@ -1,7 +1,7 @@
 {
   "name": "detecapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "aplicativo web de deteção de aparelhos",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YgorHenriqueLima/DetecApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YgorHenriqueLima/DetecApp/issues"
+  },
+  "homepage": "https://github.com/YgorHenriqueLima/DetecApp#readme"
 }
