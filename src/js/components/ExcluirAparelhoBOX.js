@@ -128,3 +128,4 @@ function ExcluirAparelhoBOX() {
     }
 
 export {ExcluirAparelhoBOX};
+
