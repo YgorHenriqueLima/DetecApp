@@ -5,6 +5,7 @@ export function obterLocalizacaoUsuario(map) {
         /*OBTENDO A POSIÇÃO DO APARELHO*/
         navigator.geolocation.getCurrentPosition(
             function (position) {
+                /**obtendo a latitude e longitude */
                 var lat = position.coords.latitude;
                 var lng = position.coords.longitude;
                 map.setView([lat, lng], 13);

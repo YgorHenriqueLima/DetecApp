@@ -3,6 +3,7 @@ import { obterLocalizacaoUsuario } from './localizacao.js';
 import { ExcluirAparelhoBOX } from './components/ExcluirAparelhoBOX.js';
 import { AdicionarAparelhoBOX } from './components/AdicionarAparelhoBOX.js';
 
+/**DOMContentLoaded acionado pelo navegador quando todo o HTML do documento for completamente carregado e analisado, antes que os estilos e as imagens sejam totalmente carregados.*/
 document.addEventListener("DOMContentLoaded", function () {
     const map = inicializarMapa();
     const btn_ativarLocalizacao = document.getElementById("btn_ativarLocalizacao");
@@ -20,7 +21,4 @@ document.addEventListener("DOMContentLoaded", function () {
     btn_excluirAparelho.addEventListener("click",()=>{
         ExcluirAparelhoBOX();
     })
-
-
-   
 });
