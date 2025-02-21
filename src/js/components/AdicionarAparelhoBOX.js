@@ -5,77 +5,73 @@ export function AdicionarAparelhoBOX() {
         existingBox.remove();
     }
 
-    // Criar a estrutura da caixa de adicionar aparelho
+   /*--------------------------------------------------COMPONENTES---------------------------------------------------------------*/
+    /*CODIGO HTML
+
+    <div id="fundoAdicionarAparelho" class="fundoAdicionarAparelho">
+    <div id="baseAdicionarAparelho" class="baseAdicionarAparelho">
+        <h2 id="estilo_h2">Adicionar Aparelho</h2>
+       
+        <div class="campo">
+            <label for="nomeAparelho">Nome do Aparelho</label>
+            <input type="text" id="nomeAparelho" placeholder="Ex: Meu Celular">
+
+            
+            <label for="tipoAparelho">Tipo do Aparelho</label>
+            <input type="text" id="tipoAparelho" placeholder="Ex: Smartphone, Tablet, Notebook">
+            
+                            
+            <label for="codigoAparelho">Código de Identificação (Opcional)</label>
+            <input type="text" id="codigoAparelho" placeholder="Ex: IMEI ou ID único">
+            
+
+            
+            <label for="localizacaoAparelho">Localização Atual</label>
+            <input type="text" id="localizacaoAparelho" placeholder="Capturando localização..." readonly>
+            
+
+            
+            <button id="obterLocalizacao" class="button">Obter Localização</button>
+
+        </div>
+     
+        <div class="buttons">
+            <button id="btnSalvarAparelho" class="button">Salvar</button>
+            <button id="btnCancelarAdicionar" class="button">Cancelar</button>
+        </div>
+    </div>
+</div>
+    
+    */
+
+
     const fundoAdicionarAparelho = document.createElement("div");
-    fundoAdicionarAparelho.setAttribute("id", "fundoAdicionarAparelho");
-    fundoAdicionarAparelho.setAttribute("class", "fundoAdicionarAparelho");
-    document.body.appendChild(fundoAdicionarAparelho);
+    fundoAdicionarAparelho.setAttribute("class","fundoAdicionarAparelho");
+    document.body.prepend(fundoAdicionarAparelho);
 
     const baseAdicionarAparelho = document.createElement("div");
-    baseAdicionarAparelho.setAttribute("id", "baseAdicionarAparelho");
-    baseAdicionarAparelho.setAttribute("class", "baseAdicionarAparelho");
+    baseAdicionarAparelho.setAttribute("class","baseAdicionarAparelho");
     fundoAdicionarAparelho.appendChild(baseAdicionarAparelho);
 
-    // Criar título
-    const titulo = document.createElement("h2");
-    titulo.setAttribute("id", "estilo_h2");
-    titulo.textContent = "Adicionar Aparelho";
-    baseAdicionarAparelho.appendChild(titulo);
+        const H2 = document.createElement("h2");
+        H2.setAttribute("id","estilo_h2");
+        H2.innerHTML = "Adicionar Aparelho";
+        baseAdicionarAparelho.appendChild(H2);
 
-    // Função para criar campos
-    function criarCampo(id, label, placeholder, type = "text", readonly = false) {
         const campo = document.createElement("div");
-        campo.setAttribute("class", "campo");
+        campo.setAttribute("class","campo");
+        baseAdicionarAparelho.appendChild(campo);
 
-        const labelElement = document.createElement("label");
-        labelElement.setAttribute("for", id);
-        labelElement.textContent = label;
-        campo.appendChild(labelElement);
+            const label = document.createElement("label");
+            label.setAttribute("for","nomeAparelho");
+            label.innerHTML = "Nome do Aparelho";
 
-        const inputElement = document.createElement("input");
-        inputElement.setAttribute("type", type);
-        inputElement.setAttribute("id", id);
-        inputElement.setAttribute("placeholder", placeholder);
-        if (readonly) {
-            inputElement.setAttribute("readonly", "true");
-        }
-        campo.appendChild(inputElement);
+            
 
-        return campo;
-    }
 
-    // Adicionar campos ao formulário
-    baseAdicionarAparelho.appendChild(criarCampo("nomeAparelho", "Nome do Aparelho", "Ex: Meu Celular"));
-    baseAdicionarAparelho.appendChild(criarCampo("tipoAparelho", "Tipo do Aparelho", "Ex: Smartphone, Tablet, Notebook"));
-    baseAdicionarAparelho.appendChild(criarCampo("codigoAparelho", "Código de Identificação (Opcional)", "Ex: IMEI ou ID único"));
 
-    // Campo de localização com botão
-    const campoLocalizacao = criarCampo("localizacaoAparelho", "Localização Atual", "Capturando localização...", "text", true);
-    const btnObterLocalizacao = document.createElement("button");
-    btnObterLocalizacao.setAttribute("id", "obterLocalizacao");
-    btnObterLocalizacao.setAttribute("class", "button");
-    btnObterLocalizacao.textContent = "Obter Localização";
-    campoLocalizacao.appendChild(btnObterLocalizacao);
-    baseAdicionarAparelho.appendChild(campoLocalizacao);
 
-    // Botões de ação
-    const buttonsContainer = document.createElement("div");
-    buttonsContainer.setAttribute("class", "buttons");
-
-    const btnSalvar = document.createElement("button");
-    btnSalvar.setAttribute("id", "btnSalvarAparelho");
-    btnSalvar.setAttribute("class", "button");
-    btnSalvar.textContent = "Salvar";
-
-    const btnCancelar = document.createElement("button");
-    btnCancelar.setAttribute("id", "btnCancelarAdicionar");
-    btnCancelar.setAttribute("class", "button");
-    btnCancelar.textContent = "Cancelar";
-    btnCancelar.addEventListener("click", () => fundoAdicionarAparelho.remove());
-
-    buttonsContainer.appendChild(btnSalvar);
-    buttonsContainer.appendChild(btnCancelar);
-    baseAdicionarAparelho.appendChild(buttonsContainer);
+    /*----------------------------------------------------------------------------------------------------------------------------*/
 
     // Aplicar estilos ao modal
     const estiloCSS = `
@@ -96,7 +92,7 @@ export function AdicionarAparelhoBOX() {
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            width: 400px;
+            width: 500px;
             text-align: center;
         }
 
@@ -110,13 +106,15 @@ export function AdicionarAparelhoBOX() {
             font-size: 14px;
             margin-bottom: 5px;
             color: #555;
+            margin: 5px;
         }
 
-        .campo input, .campo select {
-            width: 100%;
+        .campo input {
+            width: 90%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            margin: 10px;
             font-size: 16px;
             color: #333;
         }
